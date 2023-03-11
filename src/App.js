@@ -7,6 +7,8 @@ import Login from "./components/login_component";
 import SignUp from "./components/signup_component";
 import UserDetails from "./components/userDetails";
 import ImageUpload from "./components/imageUpload.";
+import Profile from "./components/main/Profile";
+import Workshoppage from "./components/workshop/Workshoppage";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -22,8 +24,11 @@ function App() {
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/userDetails" element={<UserDetails />} />
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/hackathon" element={<Workshoppage/>}/>
         </Routes>
         {/* <ImageUpload/> */}
+
       </div>
     </Router>
   );

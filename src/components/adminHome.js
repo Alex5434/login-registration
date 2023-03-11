@@ -3,7 +3,10 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ReactPaginate from 'react-paginate';
 import { useRef } from "react";
-export default function AdminHome({ userData }) {
+export default function 
+
+
+AdminHome({ userData }) {
 
   //setting state
   const [data, setData] = useState([]);

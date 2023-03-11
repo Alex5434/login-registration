@@ -16,7 +16,7 @@ export default function SignUp() {
       e.preventDefault();
 
       console.log(fname, lname, email, password);
-      fetch("http://localhost:5000/register", {
+      fetch("http://localhost:5010/register", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -35,11 +35,6 @@ export default function SignUp() {
         .then((res) => res.json())
         .then((data) => {
           console.log(data, "userRegister");
-          if (data.status == "ok") {
-            alert("Registration Successful");
-          } else {
-            alert("Something went wrong");
-          }
         });
     }
   };
@@ -50,21 +45,8 @@ export default function SignUp() {
         <form onSubmit={handleSubmit}>
           <h3>Sign Up</h3>
           <div>
-            Register As
-            <input
-              type="radio"
-              name="UserType"
-              value="User"
-              onChange={(e) => setUserType(e.target.value)}
-            />
-            User
-            <input
-              type="radio"
-              name="UserType"
-              value="Admin"
-              onChange={(e) => setUserType(e.target.value)}
-            />
-            Admin
+            
+            
           </div>
           {userType == "Admin" ? (
             <div className="mb-3">
